@@ -31,6 +31,11 @@ dependencies {
     detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.21.0")
 }
 
+configurations.all {
+    exclude("org.slf4j", "slf4j-log4j12")
+    exclude("org.log4j", "log4j")
+}
+
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         freeCompilerArgs = listOf("-Xjsr305=strict")
