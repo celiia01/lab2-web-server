@@ -9,7 +9,7 @@ class TimeComponent
 
 data class TimeDTO(val time: LocalDateTime)
 
-interface TimeProvider {
+interface TimeProvider { 
     fun now(): LocalDateTime
 }
 
